@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--Se pone el formulario con la action que indicara la ruta a la que responde el formulario-->
+    <!--Y en el metodo ponemos la operacion que vamos a hacer, en este caso un Post-->
+    <form action="/student" method="POST">
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" /><br /><br />
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <input type="submit" type="submit" />
+    </form>
+    <!--El id que pongamos para los input es el que usaremos cuando queramos acceder a los datos que se enviaron por el body de este formulario-->
+  </body>
+</html>
