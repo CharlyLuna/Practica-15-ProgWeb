@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <link href="/assets/style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <h1>Person: <%= ID %></h1>
+    <h2>Message: <%= Message %></h2>
+
+    <ul>
+      <!--Ponemos un switch para que se verifique que se haya recibido uno de los 3 mensajes permitidos-->
+      <% switch (Message) { case 'Hola' : %> <% for (var i = 0; i < Times; i++)
+      { %>
+      <!--Con el For() hacemos que se repita el mensaje la cantidad especificada en Times-->
+      <li>Hola <%= ID %></li>
+      <% } %> <% break; case 'Bienvenido' : %> <% for (var i = 0; i < Times;
+      i++) { %>
+      <li>Bienvenido <%= ID %></li>
+      <% } %> <% break; case 'Adios' : %> <% for (var i = 0; i < Times; i++) {
+      %>
+      <li>Adios <%= ID %></li>
+      <% } %> <% break; default: %>
+      <!--Agregamos un caso por defecto para cuando no llegue ninguno de los mensajes permitidos-->
+      <li>Mensaje no valido</li>
+      <% break; } %>
+    </ul>
+  </body>
+</html>
